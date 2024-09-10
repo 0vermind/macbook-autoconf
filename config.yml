@@ -112,17 +112,20 @@ homebrew_installed_packages:
   - fzf
   - zsh-syntax-highlighting
   - powerlevel10k
-  - font-meslo-for-powerlevel10k
+  - name: font-meslo-for-powerlevel10k
+    state: ugrade
+  # - font-meslo-lg-nerd-font 
 
 homebrew_taps: []
 homebrew_upgrade_all_packages: true
+homebrew_cask_accept_external_apps: true
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   # - google-chrome
   # # displaylink #optionals drivers
-  # - iterm2
+  - iterm2
   # - spotify
-  # - double-commander
+  - double-commander
   # - whatsapp
   # - obsidian
   # - protonvpn
