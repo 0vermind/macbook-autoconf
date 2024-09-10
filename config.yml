@@ -108,11 +108,18 @@ homebrew_installed_packages:
   - zsh-syntax-highlighting
   - powerlevel10k
   # - name: font-meslo-for-powerlevel10k
-  
   #   ignore_errors: true
   # for some reason fonts are not idempotent
+  
   # - font-meslo-lg-nerd-font 
+  # it istall a lot of meslo fonts ut not the right one? 
+  
   # echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
+  # useless
+  
+  # - just install powerlevel10k 
+  # - import my .p10k.zsh
+  # - start a p10k configure only downloading meslolgs-fonts and that's it but missing oh-my-zsh
 homebrew_taps: []
 homebrew_upgrade_all_packages: true
 homebrew_cask_accept_external_apps: true
