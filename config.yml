@@ -134,7 +134,7 @@ homebrew_cask_apps:
   # - licecap
   # - sequel-ace
   # - transmit
-  # - linearmouse
+  - linearmouse
   # - visual-studio-code
 
 
