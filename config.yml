@@ -65,6 +65,7 @@ dotfiles_files:
   - .osx
   
 homebrew_installed_packages:
+  # value of state must be one of: present, installed, latest, upgraded, head, linked, unlinked, absent, removed, uninstalled,
   # - ansible # Installed via Pip.
   - git
   - wget
@@ -113,8 +114,9 @@ homebrew_installed_packages:
   - zsh-syntax-highlighting
   - powerlevel10k
   - name: font-meslo-for-powerlevel10k
-    state: upgraded
-    # ignore_errors: yes
+    state: present
+    ignore_errors: true
+    # for some reason fonts are not idempotent
   # - font-meslo-lg-nerd-font 
 
 homebrew_taps: []
