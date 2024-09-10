@@ -113,7 +113,8 @@ homebrew_installed_packages:
   - zsh-syntax-highlighting
   - powerlevel10k
   - name: font-meslo-for-powerlevel10k
-    state: ugrade
+    state: upgraded
+    # ignore_errors: yes
   # - font-meslo-lg-nerd-font 
 
 homebrew_taps: []
