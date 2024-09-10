@@ -56,12 +56,12 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles
+dotfiles_repo: https://gitlab.com/the0vermind/dotfiles
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/Development/dotfiles
 dotfiles_files:
   - .zshrc
-  # - .p10k.zsh
+  - .p10k.zsh
   - .osx
   
 homebrew_installed_packages:
@@ -107,12 +107,12 @@ homebrew_installed_packages:
   - fzf
   - zsh-syntax-highlighting
   - powerlevel10k
-  - name: font-meslo-for-powerlevel10k
-    state: installed
+  # - name: font-meslo-for-powerlevel10k
+  
   #   ignore_errors: true
   # for some reason fonts are not idempotent
   # - font-meslo-lg-nerd-font 
-
+  # echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 homebrew_taps: []
 homebrew_upgrade_all_packages: true
 homebrew_cask_accept_external_apps: true
