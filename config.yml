@@ -107,6 +107,12 @@ homebrew_installed_packages:
   # - wget
   # - wrk
   # - zsh-history-substring-search
+  # - fzf-tab
+  - zsh-autosuggestions
+  - fzf
+  - zsh-syntax-highlighting
+  - powerlevel10k
+  - font-meslo-for-powerlevel10k
 
 homebrew_taps: []
 homebrew_upgrade_all_packages: true
@@ -130,12 +136,6 @@ homebrew_cask_apps:
   # - transmit
   # - linearmouse
   # - visual-studio-code
-  - powerlevel10k
-  - font-meslo-for-powerlevel10k
-  # - fzf-tab
-  - zsh-autosuggestions
-  - fzf
-  - zsh-syntax-highlighting
 
 
 # See `geerlingguy.mas` role documentation for usage instructions.
