@@ -49,7 +49,7 @@ dockitems_persist:
 - name: "Obsidian"
   path: "/Applications/Obsidian.app"
   pos: 8
-- name: "WhatsApp.app"
+- name: "WhatsApp"
   path: "/Applications/WhatsApp.app"
   pos: 9
 
@@ -76,7 +76,6 @@ homebrew_installed_packages:
   - ncdu
   - htop
   - ssh-copy-id
-
   - name: neofetch
     tags: extra
     with_nested:
@@ -108,10 +107,10 @@ homebrew_installed_packages:
   # - openssl
   # - pv
   # - wrk
-# uses meslo LGS NerdFonts
+  # uses meslo LGS NerdFonts
+  - powerlevel10k
     tags: dev  
     with_nested:
-      - powerlevel10k
       - zsh-autosuggestions
       - zsh-syntax-highlighting
       - fzf
@@ -119,7 +118,7 @@ homebrew_installed_packages:
       - grep 
       - gnu-sed 
       # - fzf-tab
-    
+  
   # - name: font-meslo-for-powerlevel10k?
   #   ignore_errors: true
   # for some reason fonts are not idempotent
