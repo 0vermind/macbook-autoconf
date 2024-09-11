@@ -85,9 +85,8 @@ homebrew_installed_packages:
       - cowsay
   # - sqlite
   # - coreutils
-  # # - installmagic-wormhole
+  # - installmagic-wormhole
   # - pip
-  # ansible-lint
   # - autoconf
   # - bash-completion
   # - doxygen
@@ -108,7 +107,7 @@ homebrew_installed_packages:
   # - pv
   # - wrk
   # uses meslo LGS NerdFonts
-  - powerlevel10k
+  - name: powerlevel10k
     tags: dev  
     with_nested:
       - zsh-autosuggestions
