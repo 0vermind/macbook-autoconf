@@ -69,10 +69,15 @@ homebrew_installed_packages:
   # value of state must be one of: present, installed, latest, upgraded, head, linked, unlinked, absent, removed, uninstalled,
   # - ansible # Installed via Pip.
   - git
+  - nc
+  - ncdu
+  - htop
+  - ssh-copy-id
+
   - name: neofetch
     tags: extra
     with_nested:
-      - ssh-copy-id
+      - wavewmon
       - wget
       - nmap
       - iperf
@@ -117,8 +122,8 @@ homebrew_installed_packages:
   #   ignore_errors: true
   # for some reason fonts are not idempotent
   
-  # - font-meslo-lg-nerd-font 
   # it istall a lot of meslo fonts ut not the right one? 
+    #- https://www.nerdfonts.com/font-downloads
   
   # echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
   # useless
@@ -153,7 +158,11 @@ homebrew_cask_apps:
     with_nested:
     - docker
     - sequel-ace
-
+    - font-meslo-lg-nerd-font
+    - font-ubuntu-nerd-font
+    - font-ubuntu-mono-nerd-font
+    - font-symbols-only-nerd-font
+    - font-terminess-ttf-nerd-font
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
