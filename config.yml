@@ -137,22 +137,22 @@ homebrew_cask_apps:
   - linearmouse
   - whatsapp
   - obsidian
-  - protonvpn
   - rustdesk
   - vlc
+  - protonvpn
   - name: spotify
     tags: extra
     with_nested:
     - google-chrome
     - steam
     - handbrake
-    # - licecap
-    # - sequel-ace
+    - licecap
     - transmit
   - name: visual-studio-code
     tags: dev
     with_nested:
     - docker
+    - sequel-ace
 
 
 # See `geerlingguy.mas` role documentation for usage instructions.
