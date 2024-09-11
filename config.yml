@@ -67,8 +67,16 @@ dotfiles_files:
 homebrew_installed_packages:
   # value of state must be one of: present, installed, latest, upgraded, head, linked, unlinked, absent, removed, uninstalled,
   # - ansible # Installed via Pip.
+  - name: neofetch
+    tags: ssh
+    with_nested:
+      - ssh-copy-id
+      - cowsay
+      - wget
   - git
-  - cowsay
+  # - iperf
+  # - nmap
+  # - sqlite
   # - gawk #fzf-tab 
   # - grep 
   # - gnu-sed 
@@ -76,7 +84,6 @@ homebrew_installed_packages:
   # # - installmagic-wormhole
   # - pip
   # ansible-lint
-  - neofetch
   # - autoconf
   # - bash-completion
   # - doxygen
@@ -87,21 +94,16 @@ homebrew_installed_packages:
   # - go
   # - gpg
   # - httpie
-  # - iperf
   # - libevent
-  # - sqlite
-  # - nmap
+  ## - zsh-history-substring-search
   # - node
   # - nvm
   # - php
-  # - ssh-copy-id
   # - cowsay
   # - readline
   # - openssl
   # - pv
-  # - wget
   # - wrk
-  # - zsh-history-substring-search
   # - fzf-tab
   - zsh-autosuggestions
   - fzf
@@ -130,21 +132,21 @@ homebrew_cask_apps:
   # - google-chrome
   # # displaylink #optionals drivers
   - iterm2
-  # - spotify
   - double-commander
+  - linearmouse
+  # - spotify
   # - whatsapp
   # - obsidian
   # - protonvpn
-  # - steam
-  # - vlc
   # - rustdesk
-  # - docker
+  # - vlc
+  # - steam
   # - handbrake
   # - licecap
   # - sequel-ace
   # - transmit
-  - linearmouse
   # - visual-studio-code
+  # - docker
 
 
 # See `geerlingguy.mas` role documentation for usage instructions.
