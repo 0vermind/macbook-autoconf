@@ -16,6 +16,12 @@
     executable: "{{ item.executable | default(omit) }}"
   loop: "{{ npm_packages }}"
 
+# # todo pragmatically use the right version of python
+# - name: Ignore PEP 668 because it's silly.
+#   ansible.builtin.file:
+#     path: /usr/lib/python3.12/EXTERNALLY-MANAGED
+#     state: absent
+
 - name: Install global Pip packages.
   pip:
     name: "{{ item.name | default(item) }}"

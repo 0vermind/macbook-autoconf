@@ -49,6 +49,9 @@ dockitems_persist:
 - name: "Obsidian"
   path: "/Applications/Obsidian.app"
   pos: 8
+  - name: "WhatsApp.app"
+  path: "/Applications/WhatsApp.app"
+  pos: 9
 
 configure_sudoers: false
 sudoers_custom_config: ''
@@ -77,7 +80,6 @@ homebrew_installed_packages:
   - name: neofetch
     tags: extra
     with_nested:
-      - wavewmon
       - wget
       - nmap
       - iperf
