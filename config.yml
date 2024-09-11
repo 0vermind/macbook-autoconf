@@ -69,7 +69,7 @@ homebrew_installed_packages:
   # value of state must be one of: present, installed, latest, upgraded, head, linked, unlinked, absent, removed, uninstalled,
   # - ansible # Installed via Pip.
   - git
-  - nc
+  - mc
   - ncdu
   - htop
   - ssh-copy-id
