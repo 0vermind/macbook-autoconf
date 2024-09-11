@@ -1,7 +1,7 @@
 ---
 configure_dotfiles: true
 configure_terminal: true
-configure_osx: false
+configure_osx: true
 
 # Set to 'true' to configure the Dock via dockutil.
 configure_dock: true
@@ -27,28 +27,28 @@ dockitems_remove:
 dockitems_persist: 
 - name: "Google Chrome"
   path: "/Applications/Google Chrome.app/"
-  pos: 2
+  pos: 1
 - name: "Double Commander"
   path: "/Applications/Double Commander.app/"
-  pos: 3
+  pos: 2
 - name: "Visual Studio Code"
   path: "/Applications/Visual Studio Code.app/"
-  pos: 4
-- name: "Iterm2" 
+  pos: 3
+- name: "Iterm" 
   path: "/Applications/iTerm.app"
-  pos: 5
+  pos: 4
 - name: "Mail"
   path: "/Applications/Mail.app"
-  pos: 6
+  pos: 5
 - name: "Voice Memos"
   path: "/Applications/VoiceMemos.app"
-  pos: 7
+  pos: 6
 - name: "Spotify"
   path: "/Applications/Spotify.app"
-  pos: 8
+  pos: 7
 - name: "Obsidian"
   path: "/Applications/Obsidian.app"
-  pos: 9
+  pos: 8
 
 configure_sudoers: false
 sudoers_custom_config: ''
@@ -212,4 +212,3 @@ sublime_package_control:
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
-# todo: install fonts?
