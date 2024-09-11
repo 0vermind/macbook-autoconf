@@ -1,11 +1,12 @@
 ---
 configure_dotfiles: true
 configure_terminal: true
-configure_osx: true
+configure_osx: false
 
 # Set to 'true' to configure the Dock via dockutil.
 configure_dock: true
 dockitems_remove: 
+- all
 - Launchpad
 - TV
 - Podcasts
@@ -67,19 +68,16 @@ dotfiles_files:
 homebrew_installed_packages:
   # value of state must be one of: present, installed, latest, upgraded, head, linked, unlinked, absent, removed, uninstalled,
   # - ansible # Installed via Pip.
+  - git
   - name: neofetch
-    tags: ssh
+    tags: extra
     with_nested:
       - ssh-copy-id
-      - cowsay
       - wget
-  - git
-  # - iperf
-  # - nmap
+      - nmap
+      - iperf
+      - cowsay
   # - sqlite
-  # - gawk #fzf-tab 
-  # - grep 
-  # - gnu-sed 
   # - coreutils
   # # - installmagic-wormhole
   # - pip
@@ -99,18 +97,22 @@ homebrew_installed_packages:
   # - node
   # - nvm
   # - php
-  # - cowsay
   # - readline
   # - openssl
   # - pv
   # - wrk
-  # - fzf-tab
-  - zsh-autosuggestions
-  - fzf
-  - zsh-syntax-highlighting
-  - powerlevel10k
-  # uses meslo LGS NerdFonts
-  
+# uses meslo LGS NerdFonts
+    tags: dev  
+    with_nested:
+      - powerlevel10k
+      - zsh-autosuggestions
+      - zsh-syntax-highlighting
+      - fzf
+      - gawk #fzf-tab 
+      - grep 
+      - gnu-sed 
+      # - fzf-tab
+    
   # - name: font-meslo-for-powerlevel10k?
   #   ignore_errors: true
   # for some reason fonts are not idempotent
@@ -129,24 +131,28 @@ homebrew_upgrade_all_packages: true
 homebrew_cask_accept_external_apps: true
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  # - google-chrome
   # # displaylink #optionals drivers
   - iterm2
   - double-commander
   - linearmouse
-  # - spotify
-  # - whatsapp
-  # - obsidian
-  # - protonvpn
-  # - rustdesk
-  # - vlc
-  # - steam
-  # - handbrake
-  # - licecap
-  # - sequel-ace
-  # - transmit
-  # - visual-studio-code
-  # - docker
+  - whatsapp
+  - obsidian
+  - protonvpn
+  - rustdesk
+  - vlc
+  - name: spotify
+    tags: extra
+    with_nested:
+    - google-chrome
+    - steam
+    - handbrake
+    # - licecap
+    # - sequel-ace
+    - transmit
+  - name: visual-studio-code
+    tags: dev
+    with_nested:
+    - docker
 
 
 # See `geerlingguy.mas` role documentation for usage instructions.
@@ -197,3 +203,4 @@ sublime_package_control:
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
+# todo: install fonts?
