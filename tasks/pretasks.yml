@@ -1,4 +1,6 @@
 ---
+#Tasks can be run by "pre" tag
+
 # - name: Ignore PEP 668 because it's silly.
 #   ansible.builtin.file:
 #     path: /usr/local/python3.12/EXTERNALLY-MANAGED
