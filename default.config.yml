@@ -31,7 +31,8 @@ dotfiles_files:
   - .inputrc
   - .osx
   - .vimrc
-
+dev: false
+extra: false
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
   - autoconf

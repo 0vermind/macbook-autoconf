@@ -131,6 +131,8 @@ homebrew_installed_packages:
   # - just install powerlevel10k 
   # - import my .p10k.zsh
   # - start a p10k configure only downloading meslolgs-fonts and that's it but missing oh-my-zsh, maybe I don't need it.
+dev: false
+extra: true  
 homebrew_taps: []
 homebrew_upgrade_all_packages: true
 homebrew_cask_accept_external_apps: true
