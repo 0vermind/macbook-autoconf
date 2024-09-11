@@ -49,7 +49,7 @@ dockitems_persist:
 - name: "Obsidian"
   path: "/Applications/Obsidian.app"
   pos: 8
-  - name: "WhatsApp.app"
+- name: "WhatsApp.app"
   path: "/Applications/WhatsApp.app"
   pos: 9
 
