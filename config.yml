@@ -83,6 +83,17 @@ homebrew_installed_packages:
       - nmap
       - iperf
       - cowsay
+  - name: powerlevel10k
+    tags: dev  
+    with_nested:
+      - zsh-autosuggestions
+      - zsh-syntax-highlighting
+      - fzf
+      - gawk #fzf-tab 
+      - grep 
+      - gnu-sed 
+      # - fzf-tab
+  
   # - sqlite
   # - coreutils
   # - installmagic-wormhole
@@ -107,17 +118,6 @@ homebrew_installed_packages:
   # - pv
   # - wrk
   # uses meslo LGS NerdFonts
-  - name: powerlevel10k
-    tags: dev  
-    with_nested:
-      - zsh-autosuggestions
-      - zsh-syntax-highlighting
-      - fzf
-      - gawk #fzf-tab 
-      - grep 
-      - gnu-sed 
-      # - fzf-tab
-  
   # - name: font-meslo-for-powerlevel10k?
   #   ignore_errors: true
   # for some reason fonts are not idempotent
