@@ -116,33 +116,33 @@ homebrew_upgrade_all_packages: true
 homebrew_cask_accept_external_apps: true
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  # # displaylink #optionals drivers
-  - iterm2
+  # # # displaylink #optionals drivers
+  # - iterm2
   - double-commander
   - linearmouse
-  - whatsapp
-  - obsidian
-  - rustdesk
-  - vlc
-  - protonvpn
-  - name: spotify
-    tags: extra
-    with_nested:
-    - google-chrome
-    - steam
-    - handbrake
-    - licecap
-    - transmit
-  - name: visual-studio-code
-    tags: dev
-    with_nested:
-    - docker
-    - sequel-ace
-    - font-meslo-lg-nerd-font
-    - font-ubuntu-nerd-font
-    - font-ubuntu-mono-nerd-font
-    - font-symbols-only-nerd-font
-    - font-terminess-ttf-nerd-font
+  # - whatsapp
+  # - obsidian
+  # - rustdesk
+  # - vlc
+  # - protonvpn
+  # - name: spotify
+  #   tags: extra
+  #   with_nested:
+  #   - google-chrome
+  #   - steam
+  #   - handbrake
+  #   - licecap
+  #   - transmit
+  # - name: visual-studio-code
+  #   tags: dev
+  #   with_nested:
+  #   - docker
+  #   - sequel-ace
+  #   - font-meslo-lg-nerd-font
+  #   - font-ubuntu-nerd-font
+  #   - font-ubuntu-mono-nerd-font
+  #   - font-symbols-only-nerd-font
+  #   - font-terminess-ttf-nerd-font
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
