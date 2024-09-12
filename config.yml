@@ -1,10 +1,10 @@
 ---
 configure_dotfiles: true
-configure_terminal: true
-configure_osx: true
+configure_terminal: false
+configure_osx: false
 configure_pretasks: true
 # Set to 'true' to configure the Dock via dockutil.
-configure_dock: true
+configure_dock: false
 dockitems_remove: 
 - all
 - Launchpad
@@ -68,54 +68,32 @@ dotfiles_files:
   - .p10k.zsh
   - .osx
   
-homebrew_installed_packages:
+homebrew_installed_packages: []
   # value of state must be one of: present, installed, latest, upgraded, head, linked, unlinked, absent, removed, uninstalled,
   # - ansible # Installed via Pip.
-  - git
-  - mc
-  - ncdu
-  - htop
-  - ssh-copy-id
-  - name: neofetch
-    tags: extra
-    with_nested:
-      - wget
-      - nmap
-      - iperf
-      - cowsay
-  - name: powerlevel10k
-    tags: dev  
-    with_nested:
-      - zsh-autosuggestions
-      - zsh-syntax-highlighting
-      - fzf
-      - gawk #fzf-tab 
-      - grep 
-      - gnu-sed 
-      # - fzf-tab
-  
-  # - sqlite
-  # - coreutils
-  # - installmagic-wormhole
-  # - pip
-  # - autoconf
-  # - bash-completion
-  # - doxygen
-  # - gettext
-  # - gifsicle
   # - git
-  # - gh
-  # - go
-  # - gpg
-  # - httpie
-  # - libevent
-  ## - zsh-history-substring-search
-  # - node
-  # - nvm
-  # - php
-  # - readline
-  # - openssl
-  # - pv
+  # - mc
+  # - ncdu
+  # - htop
+  # - ssh-copy-id
+  # - name: neofetch
+  #   tags: extra
+  #   with_nested:
+  #     - wget
+  #     - nmap
+  #     - iperf
+  #     - cowsay
+  # - name: powerlevel10k
+  #   tags: dev  
+  #   with_nested:
+  #     - zsh-autosuggestions
+  #     - zsh-syntax-highlighting
+  #     - fzf
+  #     - gawk #fzf-tab 
+  #     - grep 
+  #     - gnu-sed 
+  #     # - fzf-tab
+
   # - wrk
   # uses meslo LGS NerdFonts
   # - name: font-meslo-for-powerlevel10k?
