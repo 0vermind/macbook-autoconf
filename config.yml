@@ -4,7 +4,7 @@ configure_terminal: false
 configure_osx: true
 configure_pretasks: true
 # Set to 'true' to configure the Dock via dockutil.
-configure_dock: false
+configure_dock: true
 dockitems_remove: 
 - all
 - Launchpad
@@ -76,26 +76,26 @@ homebrew_installed_packages:
   - mc
   - ncdu
   - htop
-  # - ssh-copy-id
+  - ssh-copy-id
   - name: neofetch
-  #   tags: extra
-  #   with_nested:
-  #     - wget
-  #     - nmap
-  #     - iperf
-  #     - cowsay
-  # - name: powerlevel10k
-  #   tags: dev  
-  #   with_nested:
-  #     - zsh-autosuggestions
-  #     - zsh-syntax-highlighting
-  #     - fzf
-  #     - gawk #fzf-tab 
-  #     - grep 
-  #     - gnu-sed 
-  #     # - fzf-tab
+    tags: extra
+    with_nested:
+      - wget
+      - nmap
+      - iperf
+      - cowsay
+  - name: powerlevel10k
+    tags: dev  
+    with_nested:
+      - zsh-autosuggestions
+      - zsh-syntax-highlighting
+      - fzf
+      - gawk #fzf-tab 
+      - grep 
+      - gnu-sed 
+      # - fzf-tab
 
-  # - wrk
+  - wrk
   # uses meslo LGS NerdFonts
   # - name: font-meslo-for-powerlevel10k?
   #   ignore_errors: true
@@ -110,40 +110,40 @@ homebrew_installed_packages:
   # - just install powerlevel10k 
   # - import my .p10k.zsh
   # - start a p10k configure only downloading meslolgs-fonts and that's it but missing oh-my-zsh, maybe I don't need it.
-dev: false
-extra: true  
+dev: true
+extra: false  
 homebrew_taps: []
 homebrew_upgrade_all_packages: true
 homebrew_cask_accept_external_apps: true
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   # # # displaylink #optionals drivers
-  # - iterm2
+  - iterm2
   - double-commander
   - linearmouse
-  # - whatsapp
-  # - obsidian
-  # - rustdesk
-  # - vlc
-  # - protonvpn
-  # - name: spotify
-  #   tags: extra
-  #   with_nested:
-  #   - google-chrome
-  #   - steam
-  #   - handbrake
-  #   - licecap
-  #   - transmit
-  # - name: visual-studio-code
-  #   tags: dev
-  #   with_nested:
-  #   - docker
-  #   - sequel-ace
-  #   - font-meslo-lg-nerd-font
-  #   - font-ubuntu-nerd-font
-  #   - font-ubuntu-mono-nerd-font
-  #   - font-symbols-only-nerd-font
-  #   - font-terminess-ttf-nerd-font
+  - whatsapp
+  - obsidian
+  - rustdesk
+  - vlc
+  - protonvpn
+  - name: spotify
+    tags: extra
+    with_nested:
+    - google-chrome
+    - steam
+    - handbrake
+    - licecap
+    - transmit
+  - name: visual-studio-code
+    tags: dev
+    with_nested:
+    - docker
+    - sequel-ace
+    - font-meslo-lg-nerd-font
+    - font-ubuntu-nerd-font
+    - font-ubuntu-mono-nerd-font
+    - font-symbols-only-nerd-font
+    - font-terminess-ttf-nerd-font
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
