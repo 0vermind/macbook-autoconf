@@ -1,0 +1,195 @@
+---
+configure_dotfiles: true
+configure_terminal: false
+configure_osx: true
+configure_pretasks: true
+# Set to 'true' to configure the Dock via dockutil.
+configure_dock: false
+dockitems_remove: 
+- all
+- Launchpad
+- TV
+- Podcasts
+- 'App Store'
+- Calendar
+- Reminders
+- Freeform
+- Music
+- Console
+- Contacts
+- FaceTime
+- Notes
+- Maps
+- Safari
+- Photos
+- Messages
+
+dockitems_persist: 
+- name: "Google Chrome"
+  path: "/Applications/Google Chrome.app/"
+  pos: 1
+- name: "Double Commander"
+  path: "/Applications/Double Commander.app/"
+  pos: 2
+- name: "Visual Studio Code"
+  path: "/Applications/Visual Studio Code.app/"
+  pos: 3
+- name: "Iterm" 
+  path: "/Applications/iTerm.app"
+  pos: 4
+- name: "Mail"
+  path: "/Applications/Mail.app"
+  pos: 5
+- name: "Voice Memos"
+  path: "/Applications/VoiceMemos.app"
+  pos: 6
+- name: "Spotify"
+  path: "/Applications/Spotify.app"
+  pos: 7
+- name: "Obsidian"
+  path: "/Applications/Obsidian.app"
+  pos: 8
+- name: "WhatsApp"
+  path: "/Applications/WhatsApp.app"
+  pos: 9
+
+configure_sudoers: false
+sudoers_custom_config: ''
+# Example:
+# sudoers_custom_config: |
+#   # Allow users in admin group to use sudo with no password.
+#   %admin ALL=(ALL) NOPASSWD: ALL
+
+dotfiles_repo: https://gitlab.com/the0vermind/dotfiles
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/Development/dotfiles
+dotfiles_files:
+  - .zshrc
+  - .p10k.zsh
+  - .osx
+  - .gitconfig
+  
+homebrew_installed_packages: 
+  # value of state must be one of: present, installed, latest, upgraded, head, linked, unlinked, absent, removed, uninstalled,
+  # - ansible # Installed via Pip.
+  # - git
+  - mc
+  - ncdu
+  - htop
+  # - ssh-copy-id
+  - name: neofetch
+  #   tags: extra
+  #   with_nested:
+  #     - wget
+  #     - nmap
+  #     - iperf
+  #     - cowsay
+  # - name: powerlevel10k
+  #   tags: dev  
+  #   with_nested:
+  #     - zsh-autosuggestions
+  #     - zsh-syntax-highlighting
+  #     - fzf
+  #     - gawk #fzf-tab 
+  #     - grep 
+  #     - gnu-sed 
+  #     # - fzf-tab
+
+  # - wrk
+  # uses meslo LGS NerdFonts
+  # - name: font-meslo-for-powerlevel10k?
+  #   ignore_errors: true
+  # for some reason fonts are not idempotent
+  
+  # it istall a lot of meslo fonts ut not the right one? 
+    #- https://www.nerdfonts.com/font-downloads
+  
+  # echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
+  # useless
+  
+  # - just install powerlevel10k 
+  # - import my .p10k.zsh
+  # - start a p10k configure only downloading meslolgs-fonts and that's it but missing oh-my-zsh, maybe I don't need it.
+dev: false
+extra: true  
+homebrew_taps: []
+homebrew_upgrade_all_packages: true
+homebrew_cask_accept_external_apps: true
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  # # # displaylink #optionals drivers
+  # - iterm2
+  - double-commander
+  - linearmouse
+  # - whatsapp
+  # - obsidian
+  # - rustdesk
+  # - vlc
+  # - protonvpn
+  # - name: spotify
+  #   tags: extra
+  #   with_nested:
+  #   - google-chrome
+  #   - steam
+  #   - handbrake
+  #   - licecap
+  #   - transmit
+  # - name: visual-studio-code
+  #   tags: dev
+  #   with_nested:
+  #   - docker
+  #   - sequel-ace
+  #   - font-meslo-lg-nerd-font
+  #   - font-ubuntu-nerd-font
+  #   - font-ubuntu-mono-nerd-font
+  #   - font-symbols-only-nerd-font
+  #   - font-terminess-ttf-nerd-font
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps: []
+mas_email: ""
+mas_password: ""
+
+osx_script: "~/.osx --no-restart"
+
+# Install packages from other package managers.
+# Note: You are responsible for making sure the required package managers are
+# installed, eg. through homebrew.
+composer_packages: []
+# - name: drush
+#   state: present # present/absent, default: present
+#   version: "^8.1" # default: N/A
+gem_packages: []
+# - name: bundler
+#   state: present # present/absent/latest, default: present
+#   version: "~> 1.15.1" # default: N/A
+npm_packages: []
+# - name: webpack
+#   state: present # present/absent/latest, default: present
+#   version: "^2.6" # default: N/A
+pip_packages: 
+#   state: present # present/absent/latest, default: present
+#   version: "0.16.3" # default: N/A
+- ansible-lint
+- ansibug
+
+# Set to 'true' to configure Sublime Text.
+configure_sublime: false
+sublime_base_path: '~/Library/Application Support/Sublime Text'
+sublime_config_path: "Packages/User"
+sublime_package_control:
+  - "DocBlockr"
+  - "Dockerfile Syntax Highlighting"
+  - "FileDiffs"
+  - "GitHub Flavored Markdown Preview"
+  - "Jinja2"
+  - "Package Control"
+  - "PHP-Twig"
+  - "Pretty JSON"
+  - "SublimeLinter"
+  - "SublimeLinter-contrib-yamllint"
+  - "TrailingSpaces"
+  - "WordCount"
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []
