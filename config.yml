@@ -1,7 +1,7 @@
 ---
 configure_dotfiles: true
 configure_terminal: false
-configure_osx: false
+configure_osx: true
 configure_pretasks: true
 # Set to 'true' to configure the Dock via dockutil.
 configure_dock: false
@@ -67,6 +67,7 @@ dotfiles_files:
   - .zshrc
   - .p10k.zsh
   - .osx
+  - .gitconfig
   
 homebrew_installed_packages: 
   # value of state must be one of: present, installed, latest, upgraded, head, linked, unlinked, absent, removed, uninstalled,
