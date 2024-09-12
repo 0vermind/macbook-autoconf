@@ -4,5 +4,6 @@ roles:
   - name: geerlingguy.dotfiles
   - name: viasite-ansible.zsh
   - name: ctorgalson.ssh_keys
+
 collections:
   - name: geerlingguy.mac
